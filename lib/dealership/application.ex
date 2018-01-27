@@ -14,6 +14,7 @@ defmodule Dealership.Application do
       supervisor(DealershipWeb.Endpoint, []),
       # Start your own worker by calling: Dealership.Worker.start_link(arg1, arg2, arg3)
       # worker(Dealership.Worker, [arg1, arg2, arg3]),
+#      worker(Dealership.InventorySync.Worker, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
