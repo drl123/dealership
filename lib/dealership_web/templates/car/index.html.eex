@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for car <- @cars do %>
+    <tr>
+      <td> <%= car_title(car) %> </td>
+      <td class="text-right">
+        <span><%= link "Show", to: car_path(@conn, :show, car), class: "btn btn-default btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+<%= paginate @conn, @kerosene %>
