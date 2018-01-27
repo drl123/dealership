@@ -40,6 +40,7 @@ defmodule Dealership.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
+      {:credo, "~> 0.9.0-rc1", only: [:dev, :test], runtime: false},
       {:kerosene, "~> 0.7.0"},
       {:slugger, "~> 0.2.0"},
       {:number, "~> 0.5.4"},

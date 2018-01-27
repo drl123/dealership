@@ -6,7 +6,7 @@ defmodule DealershipWeb.CarController do
 
   def index(conn, params) do
     {cars, kerosene} = Listings.list_cars(params)
-    render(conn, "index.html", cars: cars, kerosene: kerosene )
+    render(conn, "index.html", cars: cars, kerosene: kerosene)
   end
 
   defp id_from_slug(slug) do
