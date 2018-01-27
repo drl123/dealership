@@ -8,12 +8,30 @@ defmodule Dealership.Listings do
 
   alias Dealership.Listings.Car
 
+  def create_or_update_car!(params) do
+    params
+    |> get_car_struct()
+    |> Car.changeset(params)
+    |> Repo.insert_or_update!()
+  end
+
+  defp get_car_struct(params) do
+    car_vin = params["car_VIN"]
+
+    case Repo.get_by(Car, car_VIN: car_vin) do
+      nil ->
+        %Car{car_VIN: car_vin}
+      car ->
+        car
+    end
+  end
+
   @doc """
   Returns the list of car.
 
   ## Examples
 
-      iex> list_car()
+      iex> list_cars()
       [%Car{}, ...]
 
   """

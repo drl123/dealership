@@ -44,6 +44,7 @@ defmodule Dealership.Mixfile do
       {:kerosene, "~> 0.7.0"},
       {:slugger, "~> 0.2.0"},
       {:number, "~> 0.5.4"},
+      {:csv, "~> 2.0"},
       {:cowboy, "~> 1.0"}
     ]
   end
